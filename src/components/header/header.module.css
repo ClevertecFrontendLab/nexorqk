@@ -3,9 +3,14 @@ header.header {
     min-height: 168px;
     background: #f0f5ff;
     padding: 16px 24px;
+    flex: auto;
 }
 
 div h1.title {
     margin: 0;
     font-weight: 700;
+}
+
+.row {
+    justify-content: space-between;
 }

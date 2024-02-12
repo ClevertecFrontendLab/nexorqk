@@ -1,18 +1,18 @@
 import { Layout } from 'antd';
+
 import { Header } from '@components/header';
+import { Sidebar } from '@components/sidebar';
 
 import classes from './main-page.module.css';
-
-const { Footer, Sider, Content } = Layout;
 
 export const MainPage: React.FC = () => {
     return (
         <Layout className={classes.mainLayout}>
-            <Sider>Sider</Sider>
+            <Sidebar />
             <Layout>
                 <Header />
-                <Content>Content</Content>
-                <Footer>Footer</Footer>
+                <Layout.Content>Content</Layout.Content>
+                <Layout.Footer>Footer</Layout.Footer>
             </Layout>
         </Layout>
     );

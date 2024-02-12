@@ -1,0 +1,14 @@
+aside.sider {
+    background: #fff;
+    height: 100%;
+}
+
+aside.sider > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.exit {
+    margin-top: auto;
+}
