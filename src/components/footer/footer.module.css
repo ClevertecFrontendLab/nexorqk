@@ -34,6 +34,7 @@ span.cardPro {
 .osLinks {
     display: flex;
     justify-content: space-between;
+    line-height: 18.2px;
 }
 
 .osLink {

@@ -6,7 +6,7 @@ div .mainLayout {
 }
 
 .siteLayout {
-    margin-left: 200px;
+    margin-left: 208px;
 }
 
 .collapsed {
@@ -14,7 +14,12 @@ div .mainLayout {
 }
 
 .bgWrapper {
-    padding: 24px 0 0 24px;
     background: no-repeat center / cover url('@assets/images/main-page-light-bg.jpg');
     height: 100%;
+}
+
+@media screen and (max-width: 576px) {
+    .siteLayout {
+        margin-left: 106px;
+    }
 }

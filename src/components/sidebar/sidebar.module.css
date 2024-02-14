@@ -1,7 +1,8 @@
 aside.sider {
     background: #fff;
-    height: 100%;
+    height: 100vh;
     position: fixed;
+    width: 208px;
 }
 
 aside.sider > div {
@@ -40,4 +41,22 @@ span.menuIcon {
     display: flex;
     align-items: center;
     gap: 25px;
+}
+
+@media screen and (max-width: 576px) {
+    aside.sider > div {
+        gap: 16px;
+    }
+
+    .logo {
+        padding: 16px 17px;
+    }
+
+    ul.menu > li {
+        padding: 0 8px !important;
+    }
+
+    .trigger {
+        top: 24px;
+    }
 }

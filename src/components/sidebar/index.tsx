@@ -8,14 +8,14 @@ import {
     MenuUnfoldOutlined,
     TrophyFilled,
 } from '@ant-design/icons';
-// import { useWindowSize } from 'usehooks-ts';
+import { useWindowSize } from 'usehooks-ts';
+import classNames from 'classnames';
 
 import LogoIcon from '@assets/icons/logo.svg?react';
 import LogoCollapsedIcon from '@assets/icons/logo-collapsed.svg?react';
 import ExitIcon from '@assets/icons/exit.svg?react';
 
 import classes from './sidebar.module.css';
-import classNames from 'classnames';
 
 const items = [
     {
@@ -40,37 +40,62 @@ const items = [
     },
 ];
 
+const itemsNoIcon = [
+    {
+        key: 'calendar',
+        label: 'Календарь',
+    },
+    {
+        key: 'training',
+        label: 'Тренировки',
+    },
+    {
+        key: 'achievements',
+        label: 'Достижения',
+    },
+    {
+        key: 'profile',
+        label: 'Профиль',
+    },
+];
+
 interface SidebarProps {
     collapsed: boolean;
     setCollapsed: Dispatch<SetStateAction<boolean>>;
 }
 
 export const Sidebar: React.FC<SidebarProps> = ({ collapsed, setCollapsed }) => {
-    // const { width = 0 } = useWindowSize();
+    const { width } = useWindowSize();
 
-    // width < '576px';
+    const isDesktopWidth = width > 576;
 
     return (
-        <Layout.Sider trigger={null} collapsible collapsed={collapsed} className={classes.sider}>
+        <Layout.Sider
+            width={isDesktopWidth ? 208 : 106}
+            trigger={null}
+            collapsible
+            collapsed={collapsed}
+            className={classes.sider}
+        >
             <div className={classNames(classes.logo, { [classes.collapsed]: collapsed })}>
-                {collapsed ? <LogoCollapsedIcon /> : <LogoIcon />}
+                {collapsed ? <LogoCollapsedIcon /> : <LogoIcon width={isDesktopWidth ? 133 : 72} />}
             </div>
-            <Menu items={items} />
+            <Menu className={classes.menu} items={isDesktopWidth ? items : itemsNoIcon} />
             {collapsed ? (
                 <MenuUnfoldOutlined
-                    data-test-id='sider-switch'
+                    data-test-id={isDesktopWidth ? 'sider-switch' : 'sider-switch-mobile'}
                     className={classes.trigger}
                     onClick={() => setCollapsed(!collapsed)}
                 />
             ) : (
                 <MenuFoldOutlined
-                    data-test-id='sider-switch'
+                    data-test-id={isDesktopWidth ? 'sider-switch' : 'sider-switch-mobile'}
                     className={classes.trigger}
                     onClick={() => setCollapsed(!collapsed)}
                 />
             )}
             <div className={classes.exit}>
-                <ExitIcon />
+                <ExitIcon display={isDesktopWidth ? 'block' : 'none'} />
                 <Typography.Text>Выход</Typography.Text>
             </div>
         </Layout.Sider>

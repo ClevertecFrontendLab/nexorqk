@@ -17,7 +17,7 @@ export const Footer: React.FC = () => (
                     <Text className={classes.cardPro}>Доступно в PRO-тарифе</Text>
                 </>
             }
-            headStyle={{ padding: '4px 24px' }}
+            headStyle={{ padding: '4px 24px', fontWeight: 400, lineHeight: '18.2px' }}
             size='small'
             bordered={false}
         >

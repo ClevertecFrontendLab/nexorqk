@@ -13,7 +13,7 @@ export const ContentCard: React.FC<ContentCardProps> = ({ title, label }) => (
         className={classes.card}
         title={title}
         size='small'
-        headStyle={{ padding: 4, lineHeight: '20.8px' }}
+        headStyle={{ padding: 4, lineHeight: '20.8px', fontWeight: 400 }}
         bodyStyle={{ padding: 19 }}
         bordered={false}
     >

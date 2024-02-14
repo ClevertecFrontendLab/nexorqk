@@ -3,6 +3,10 @@ main.content {
     width: 100%;
 }
 
+.wrapper {
+    padding: 24px;
+}
+
 div div.opportunities {
     font-size: 16px;
     color: #061178;
@@ -44,6 +48,11 @@ div h4.about {
 .contentCards {
     color: inherit;
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 24px;
+    gap: 16px;
+}
+
+@media screen and (max-width: 576px) {
+    .contentCards {
+        flex-direction: column;
+    }
 }

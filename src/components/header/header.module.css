@@ -1,6 +1,5 @@
 header.header {
-    height: 100%;
-    max-height: 168px;
+    height: 168px;
     background: #f0f5ff;
     padding: 16px 24px;
     line-height: 18.2px;
@@ -28,4 +27,34 @@ div h1.title {
     color: #262626;
     display: flex;
     gap: 10px;
+}
+
+@media screen and (max-width: 1024px) {
+    header.header {
+        height: 194px;
+    }
+
+    .header.collapsed {
+        height: 132px;
+    }
+
+    div h1.title {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 31.2px;
+    }
+
+    span.settingsIcon {
+        display: none;
+    }
+
+    .titleSpan {
+        display: inline-block;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .settings a.settingsLink {
+        display: none;
+    }
 }
