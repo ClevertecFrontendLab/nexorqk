@@ -20,6 +20,6 @@ div .mainLayout {
 
 @media screen and (max-width: 576px) {
     .siteLayout {
-        margin-left: 106px;
+        margin-left: 0;
     }
 }

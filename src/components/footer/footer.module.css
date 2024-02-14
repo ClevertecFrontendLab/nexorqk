@@ -47,3 +47,12 @@ span.cardPro {
         padding: 12px;
     }
 }
+
+@media screen and (max-width: 576px) {
+    footer.footer {
+        padding: 0 16px 42px;
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 24px;
+    }
+}

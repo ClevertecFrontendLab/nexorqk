@@ -52,6 +52,10 @@ div h4.about {
 }
 
 @media screen and (max-width: 576px) {
+    .wrapper {
+        padding: 24px 16px;
+    }
+
     .contentCards {
         flex-direction: column;
     }

@@ -54,6 +54,15 @@ div h1.title {
 }
 
 @media screen and (max-width: 576px) {
+    .header.header {
+        height: 166px;
+    }
+
+    div h1.title {
+        font-size: 20px;
+        line-height: 26px;
+    }
+
     .settings a.settingsLink {
         display: none;
     }

@@ -72,6 +72,8 @@ export const Sidebar: React.FC<SidebarProps> = ({ collapsed, setCollapsed }) => 
     return (
         <Layout.Sider
             width={isDesktopWidth ? 208 : 106}
+            breakpoint='sm'
+            collapsedWidth={isDesktopWidth ? undefined : '0'}
             trigger={null}
             collapsible
             collapsed={collapsed}
@@ -96,7 +98,9 @@ export const Sidebar: React.FC<SidebarProps> = ({ collapsed, setCollapsed }) => 
             )}
             <div className={classes.exit}>
                 <ExitIcon display={isDesktopWidth ? 'block' : 'none'} />
-                <Typography.Text>Выход</Typography.Text>
+                <Typography.Text className={classNames({ [classes.collapsed]: collapsed })}>
+                    Выход
+                </Typography.Text>
             </div>
         </Layout.Sider>
     );

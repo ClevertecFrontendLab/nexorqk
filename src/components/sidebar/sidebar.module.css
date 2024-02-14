@@ -43,7 +43,17 @@ span.menuIcon {
     gap: 25px;
 }
 
+@media screen and (max-width: 1440px) {
+    .exit .collapsed {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 576px) {
+    aside.sider {
+        z-index: 10;
+    }
+
     aside.sider > div {
         gap: 16px;
     }
