@@ -1,0 +1,48 @@
+footer.footer {
+    background: transparent;
+    padding: 156px 24px 42px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+footer a.reviewsLink {
+    font-size: 16px;
+    line-height: 20.8px;
+    color: #2f54eb;
+    padding: 9.5px 15px;
+}
+
+div.downloadCard {
+    padding: 0;
+    width: 240px;
+}
+
+div a.cardLink {
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    line-height: 20.8px;
+    color: #2f54eb;
+}
+
+span.cardPro {
+    color: #8c8c8c;
+    line-height: 18.2px;
+}
+
+.osLinks {
+    display: flex;
+    justify-content: space-between;
+}
+
+.osLink {
+    display: flex;
+    gap: 8px;
+}
+
+@media screen and (max-width: 834px) {
+    .footer {
+        padding: 12px;
+    }
+}

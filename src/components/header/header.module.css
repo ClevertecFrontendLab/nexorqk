@@ -1,16 +1,31 @@
 header.header {
     height: 100%;
-    min-height: 168px;
+    max-height: 168px;
     background: #f0f5ff;
     padding: 16px 24px;
-    flex: auto;
+    line-height: 18.2px;
+}
+
+header a.mainLink {
+    color: #262626;
 }
 
 div h1.title {
     margin: 0;
     font-weight: 700;
+    line-height: 49.4px;
 }
 
 .row {
     justify-content: space-between;
+}
+
+.settings {
+    padding: 8px 0;
+}
+
+.settings a.settingsLink {
+    color: #262626;
+    display: flex;
+    gap: 10px;
 }

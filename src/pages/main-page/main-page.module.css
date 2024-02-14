@@ -1,6 +1,20 @@
 div .mainLayout {
-    padding: 0 20px;
-    max-width: 1480px;
+    max-width: 1440px;
+    height: 100%;
     margin: 0 auto;
     background: #fff;
+}
+
+.siteLayout {
+    margin-left: 200px;
+}
+
+.collapsed {
+    margin-left: 80px;
+}
+
+.bgWrapper {
+    padding: 24px 0 0 24px;
+    background: no-repeat center / cover url('@assets/images/main-page-light-bg.jpg');
+    height: 100%;
 }
