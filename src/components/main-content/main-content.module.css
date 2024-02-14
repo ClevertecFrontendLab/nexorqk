@@ -1,0 +1,62 @@
+main.content {
+    max-width: 752px;
+    width: 100%;
+}
+
+.wrapper {
+    padding: 24px;
+}
+
+div div.opportunities {
+    font-size: 16px;
+    color: #061178;
+    margin: 0;
+    line-height: 20.8px;
+}
+
+div.opportunitiesCard {
+    margin-bottom: 24px;
+}
+
+span.opportunitiesTitle {
+    color: inherit;
+}
+
+div ul.opportunitiesList {
+    margin: 0;
+}
+
+ul.opportunitiesList li.opportunitiesItem {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+div.aboutCard {
+    margin-bottom: 16px;
+}
+
+div h4.about {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 26px;
+    letter-spacing: 0;
+    color: #262626;
+    margin-bottom: 0;
+}
+
+.contentCards {
+    color: inherit;
+    display: flex;
+    gap: 16px;
+}
+
+@media screen and (max-width: 576px) {
+    .wrapper {
+        padding: 24px 16px;
+    }
+
+    .contentCards {
+        flex-direction: column;
+    }
+}

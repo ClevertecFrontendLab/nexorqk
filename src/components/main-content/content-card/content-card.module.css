@@ -1,0 +1,25 @@
+.card {
+    width: 240px;
+    margin-right: 16px;
+    line-height: 20.8px;
+    text-align: center;
+}
+
+.label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    line-height: 18.2px;
+    color: #2f54eb;
+}
+
+.label > span {
+    color: inherit;
+}
+
+@media screen and (max-width: 1024px) {
+    .card {
+        width: 100%;
+    }
+}

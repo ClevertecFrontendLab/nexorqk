@@ -1,0 +1,25 @@
+div .mainLayout {
+    max-width: 1440px;
+    height: 100%;
+    margin: 0 auto;
+    background: #fff;
+}
+
+.siteLayout {
+    margin-left: 208px;
+}
+
+.collapsed {
+    margin-left: 80px;
+}
+
+.bgWrapper {
+    background: no-repeat center / cover url('@assets/images/main-page-light-bg.jpg');
+    height: 100%;
+}
+
+@media screen and (max-width: 576px) {
+    .siteLayout {
+        margin-left: 0;
+    }
+}
