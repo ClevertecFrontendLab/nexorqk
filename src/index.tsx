@@ -9,6 +9,7 @@ import { MainPage } from './pages/main-page';
 import 'antd/dist/antd.css';
 import 'normalize.css';
 import './index.css';
+import { AuthPage } from '@pages/auth-page';
 
 const domNode = document.getElementById('root') as HTMLDivElement;
 const root = createRoot(domNode);
@@ -18,6 +19,7 @@ root.render(
         <Provider store={store}>
             <HashRouter>
                 <Routes>
+                    <Route path='/auth' element={<AuthPage />} />
                     <Route path='/' element={<MainPage />} />
                 </Routes>
             </HashRouter>
