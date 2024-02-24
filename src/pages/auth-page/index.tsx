@@ -1,9 +1,9 @@
-import React from 'react';
 import { Button, Checkbox, Form, Input, Tabs } from 'antd';
 import Lottie from 'lottie-react';
+import React from 'react';
 
-import loaderAnimation from './loader.json';
 import LogoIcon from '@assets/icons/logo.svg?react';
+import loaderAnimation from './loader.json';
 
 import classes from './auth-page.module.css';
 
@@ -22,61 +22,29 @@ export const AuthPage: React.FC = () => {
             key: 'sign-in',
             children: (
                 <>
-                    <Form.Item
-                        name='username'
-                        rules={[{ required: true, message: 'Please input your Username!' }]}
-                    >
-                        <Input placeholder='Username' />
+                    <Form.Item name='username' rules={[]}>
+                        <Input addonBefore='email' type='email' />
                     </Form.Item>
                     <Form.Item
+                        // help='Пароль не менее 8 символов, с заглавной буквой и цифрой'
                         name='password'
-                        rules={[{ required: true, message: 'Please input your Password!' }]}
+                        rules={[
+                            {
+                                // validator: '',
+                            },
+                        ]}
                     >
-                        <Input type='password' placeholder='Password' />
-                    </Form.Item>
-                </>
-            ),
-        },
-        { label: 'Регистрация', key: 'sign-up', children: 'Content 2' },
-    ];
-
-    return (
-        <div className={classes.wrapper}>
-            <div className={classes.formWrapper}>
-                <LogoIcon className={classes.logo} />
-                <Form
-                    name='basic'
-                    labelCol={{ span: 8 }}
-                    wrapperCol={{ span: 16 }}
-                    initialValues={{ remember: true }}
-                    onFinish={onFinish}
-                    onFinishFailed={onFinishFailed}
-                    autoComplete='off'
-                    className={classes.form}
-                >
-                    <Tabs items={items} />
-                    <Form.Item
-                        name='username'
-                        rules={[{ required: true, message: 'Please input your Username!' }]}
-                    >
-                        <Input placeholder='Username' />
-                    </Form.Item>
-                    <Form.Item
-                        name='password'
-                        rules={[{ required: true, message: 'Please input your Password!' }]}
-                    >
-                        <Input type='password' placeholder='Password' />
+                        <Input.Password />
                     </Form.Item>
                     <Form.Item>
                         <Form.Item name='remember' valuePropName='checked' noStyle>
-                            <Checkbox>Remember me</Checkbox>
+                            <Checkbox>Запомнить меня</Checkbox>
                         </Form.Item>
 
                         <a className='login-form-forgot' href=''>
-                            Forgot password
+                            Забыли пароль?
                         </a>
                     </Form.Item>
-
                     <Form.Item>
                         <Button
                             style={{ width: '100%' }}
@@ -87,6 +55,47 @@ export const AuthPage: React.FC = () => {
                             Log in
                         </Button>
                     </Form.Item>
+                </>
+            ),
+        },
+        {
+            label: 'Регистрация',
+            key: 'sign-up',
+            children: (
+                <>
+                    <Form.Item>
+                        <Button
+                            style={{ width: '100%' }}
+                            type='primary'
+                            htmlType='submit'
+                            className='login-form-button'
+                        >
+                            Log in
+                        </Button>
+                    </Form.Item>
+                </>
+            ),
+        },
+    ];
+
+    return (
+        <div className={classes.wrapper}>
+            <div className={classes.image}></div>
+            <div className={classes.formWrapper}>
+                <div>
+                    <LogoIcon width={309} height={76} />
+                </div>
+                <Form
+                    name='basic'
+                    labelCol={{ span: 8 }}
+                    wrapperCol={{ span: 16 }}
+                    initialValues={{ remember: true }}
+                    onFinish={onFinish}
+                    onFinishFailed={onFinishFailed}
+                    autoComplete='off'
+                    className={classes.form}
+                >
+                    <Tabs className={classes.tabs} items={items} />
                 </Form>
             </div>
             <div style={{ width: 200, height: 200, margin: '0 auto', display: 'none' }}>
