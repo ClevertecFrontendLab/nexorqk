@@ -10,3 +10,7 @@ section {
 body {
     font-family: 'Inter', sans-serif;
 }
+
+.global-tabs .ant-tabs-nav {
+    margin-bottom: 24px;
+}

@@ -1,0 +1,43 @@
+:global(.ant-form-item).email {
+    margin-bottom: 32px;
+}
+
+:global(.ant-form-item).password {
+    margin-bottom: 54px;
+}
+
+.rememberForgot :global(.ant-form-item-control-input-content) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.forgotLink {
+    font-size: 16px;
+    color: #2f54eb;
+}
+
+.forgotLink:hover {
+    color: #1d39c4;
+}
+
+.checkbox :global(.ant-checkbox-checked .ant-checkbox-inner) {
+    background: #2f54eb;
+}
+
+:global(.ant-form-item).formButtonItem {
+    margin-bottom: 16px;
+}
+
+button.formButton {
+    width: 100%;
+    background: #2f54eb;
+}
+
+button.formButton:hover {
+    background: #1d39c4;
+}
+
+.googleButton {
+    width: 100%;
+}
