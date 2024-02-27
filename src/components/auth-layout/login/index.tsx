@@ -1,16 +1,40 @@
 import { GooglePlusOutlined } from '@ant-design/icons';
 import { Button, Checkbox, Form, Input } from 'antd';
 import React from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
-import classes from './sign-in.module.css';
+import { Paths } from '@constants/paths';
+import { login } from '@shared/service/api/auth/login';
+import { LoginFormFields } from '@shared/types/auth';
 
-export const SignIn: React.FC = () => {
+import classes from './login.module.css';
+
+export const Login: React.FC = () => {
     const navigate = useNavigate();
-    const location = useLocation();
+
+    const onFinish = async (values: LoginFormFields) => {
+        try {
+            await login(values);
+            navigate(Paths.MAIN);
+        } catch (error) {
+            console.log(error);
+        }
+        console.log('Success:', values);
+    };
+
+    const onFinishFailed = (errorInfo: any) => {
+        console.log('Failed:', errorInfo);
+    };
 
     return (
-        <div>
+        <Form
+            name='login-form'
+            initialValues={{ remember: true }}
+            onFinish={onFinish}
+            onFinishFailed={onFinishFailed}
+            autoComplete='off'
+            className={classes.form}
+        >
             <Form.Item className={classes.email} name='email' rules={[]}>
                 <Input size='large' addonBefore='email' type='email' />
             </Form.Item>
@@ -54,6 +78,6 @@ export const SignIn: React.FC = () => {
                     Войти через Google
                 </Button>
             </Form.Item>
-        </div>
+        </Form>
     );
 };

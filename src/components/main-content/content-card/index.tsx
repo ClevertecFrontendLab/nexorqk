@@ -3,10 +3,10 @@ import { Card } from 'antd';
 
 import classes from './content-card.module.css';
 
-interface ContentCardProps {
+type ContentCardProps = {
     title: string;
     label: React.ReactElement;
-}
+};
 
 export const ContentCard: React.FC<ContentCardProps> = ({ title, label }) => (
     <Card

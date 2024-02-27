@@ -59,10 +59,10 @@ const itemsNoIcon = [
     },
 ];
 
-interface SidebarProps {
+type SidebarProps = {
     collapsed: boolean;
     setCollapsed: Dispatch<SetStateAction<boolean>>;
-}
+};
 
 export const Sidebar: React.FC<SidebarProps> = ({ collapsed, setCollapsed }) => {
     const { width } = useWindowSize();

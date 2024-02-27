@@ -1,17 +1,8 @@
 import React from 'react';
-import { Navigate, useLocation } from 'react-router-dom';
+import { Navigate, Outlet } from 'react-router-dom';
 
-interface RequireAuthProps {
-    children: React.ReactNode;
-}
+import { getLocalStorageToken } from '@shared/utils/local-storage';
 
-export const RequireAuth: React.FC<RequireAuthProps> = ({ children }) => {
-    const location = useLocation();
-    const auth = false;
-
-    if (!auth) {
-        return <Navigate to='/login' state={{ from: location }} />;
-    }
-
-    return children;
+export const RequireAuth: React.FC = () => {
+    return !getLocalStorageToken ? <Outlet /> : <Navigate to='/auth' replace />;
 };

@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { Layout } from 'antd';
 import classNames from 'classnames';
 
-import { Header } from '@components/header';
-import { Sidebar } from '@components/sidebar';
+import { Header } from '@components/main-layout/header';
+import { Sidebar } from '@components/main-layout/sidebar';
 import { MainContent } from '@components/main-content';
-import { Footer } from '@components/footer';
+import { Footer } from '@components/main-layout/footer';
 
 import classes from './main-page.module.css';
 
