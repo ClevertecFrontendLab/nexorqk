@@ -56,7 +56,7 @@ export const Registration: React.FC = () => {
                 className={classes.password}
                 help='Пароль не менее 8 символов, с заглавной буквой и цифрой'
                 name='password'
-                // rules={validationRule}
+                rules={validationRule}
             >
                 <Input.Password size='large' />
             </Form.Item>

@@ -38,15 +38,7 @@ export const Login: React.FC = () => {
             <Form.Item className={classes.email} name='email' rules={[]}>
                 <Input size='large' addonBefore='email' type='email' />
             </Form.Item>
-            <Form.Item
-                className={classes.password}
-                name='password'
-                rules={[
-                    {
-                        // validator: '',
-                    },
-                ]}
-            >
+            <Form.Item className={classes.password} name='password' rules={[]}>
                 <Input.Password size='large' />
             </Form.Item>
             <Form.Item className={classes.rememberForgot}>
